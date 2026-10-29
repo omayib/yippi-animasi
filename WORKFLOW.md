@@ -1,57 +1,66 @@
-# Workflow: dari tren viral ke video
+# Workflow: dari ide ke video siap upload
 
-Panduan ini ditulis untuk dijalankan oleh Claude (manual di chat, atau sebagai tugas terjadwal),
-tapi bisa juga diikuti manusia. Hasil akhirnya selalu **draf**: video, thumbnail, dan caption
-yang menunggu persetujuan sebelum diposting.
+Hasil akhir setiap putaran: **video MP4, thumbnail PNG, dan caption** di `out/<slug>/`.
+Upload ke TikTok dilakukan manual oleh pemilik akun.
 
-## 1. Cari tren (10–15 menit riset)
+Sebelum mulai, baca [docs/style-guide.md](docs/style-guide.md): siapa penontonnya, format,
+humor, tema, bahasa, hook, thumbnail, dan batasan.
 
-- Cari isu yang sedang ramai di Indonesia **hari ini**: Google Trends Indonesia, berita hiburan
-  dan lifestyle, topik yang ramai di TikTok/X, istilah slang baru.
-- Kumpulkan 5–8 kandidat, masing-masing dengan sumber (link) dan alasan kenapa sedang ramai.
+## 1. Cari bahan (10–15 menit)
+
+- Cari yang sedang ramai di Indonesia minggu ini: tren dan sound TikTok, Google Trends Indonesia,
+  berita hiburan dan lifestyle, istilah slang baru.
+- Kumpulkan 5–8 kandidat, masing-masing dengan link sumber dan alasan kenapa sedang ramai.
 
 ## 2. Saring
 
-Buang kandidat yang:
+Buang yang melanggar bagian **Batasan** di style guide (musibah, politik, SARA, orang sungguhan,
+IP pihak lain, body shaming, menyasar di bawah 16 tahun). Sisakan yang bisa diterjemahkan ke
+situasi sehari-hari penonton 16–24 tahun: bestie, crush, kampus/sekolah akhir, kos, keluarga,
+healing, overthinking.
 
-- menyangkut musibah, kematian, kekerasan, kasus hukum, SARA, atau politik praktis;
-- menertawakan orang sungguhan (nama asli, rupa, akun pribadi) atau korban;
-- menyangkut merek/karakter/lagu milik pihak lain sebagai bahan utama;
-- tidak cocok untuk penonton remaja.
+## 3. Tiga ide
 
-Yang tersisa: tren yang bisa diterjemahkan ke **situasi sehari-hari** remaja cewek
-(bestie, crush, sekolah, keluarga, jajan, outfit, HP, overthinking).
+Untuk 3 kandidat terbaik, tulis:
 
-## 3. Pilih sudut pandang audiens
+- **POV** satu kalimat dari sudut pandang penonton;
+- **Twist** satu kalimat;
+- **Siapa kena karma** dan bagaimana;
+- **Hook** (≤ 2 baris, terbaca tanpa suara) dan **judul thumbnail** (≤ 5 kata).
 
-Untuk 3 kandidat terbaik, tulis satu kalimat "POV"-nya dari sudut pandang remaja cewek,
-mis. tren "X lagi viral" → "POV: bestie kamu ikut-ikutan X padahal…". Tren cukup jadi bumbu;
-lelucon utamanya tetap dinamika karakter:
+Tren cukup jadi bumbu; lucunya tetap datang dari dinamika karakter:
 
-- **Bakpi**: tukang jail, gampang salting, sering kena karma.
-- **Onde**: main character, drama queen, pembalas dendam yang elegan.
-- **Mbak Klepon**: kalem, cuek, idaman semua; muncul sedikit, efeknya besar.
+- **Bakpi**: tukang jail, gampang salting, selalu kena karma.
+- **Onde**: main character, drama queen, membalas dengan elegan.
+- **Mbak Klepon**: kalem, cuek, idaman semua; muncul sebentar, dialog paling pendek, paling nendang.
 
-## 4. Tulis naskah
+Pemilik akun memilih satu ide.
 
-- 45–80 detik, 25–35 beat. Struktur: hook 3–5 detik → setup → eskalasi → plot twist → balasan
-  → kartu penutup dengan ajakan tag teman.
-- Hook pertama harus bisa dipahami tanpa suara.
-- Bahasa: Gen Z santai, tanpa makian, tanpa body shaming.
-- Tulis langsung sebagai JSON sesuai [docs/script-format.md](docs/script-format.md), simpan di
-  `scripts/<slug>.json`, isi `topic` dengan tren + link sumbernya.
+## 4. Naskah
+
+- 25–45 detik, sekitar 12–20 beat. Hook ≤ 3 detik → setup → eskalasi → twist → balasan →
+  kartu penutup.
+- Maksimal 2–3 slang per video, satu momen hangat, tanpa ceramah.
+- Tulis sebagai JSON sesuai [docs/script-format.md](docs/script-format.md), simpan di
+  `scripts/<slug>.json`. Isi `topic` (tren + link), `caption` (+ 3–5 hashtag), `thumbnail`,
+  dan `outro`.
 
 ## 5. Render dan periksa
 
 ```bash
-node render.js scripts/<slug>.json --stills 2,10,30,50   # cek frame dulu
+node render.js scripts/<slug>.json --stills 1,8,20,35   # cek frame dulu
 node render.js scripts/<slug>.json                       # video + thumbnail + caption
 ```
 
-Lihat stills sebelum render penuh: subtitle tidak bertumpuk dengan karakter, karakter tidak
-terpotong, teks HP muat.
+Periksa stills: subtitle tidak menabrak karakter, karakter tidak terpotong, teks HP muat,
+thumbnail terbaca saat dikecilkan.
 
-## 6. Serahkan untuk disetujui
+## 6. Serahkan
 
-Kirim ke pemilik akun: ringkasan tren + sumber, video, thumbnail, caption. **Jangan posting
-otomatis.** Pemilik akun yang memutuskan.
+Kirim ke pemilik akun: ringkasan tren + sumber, video, thumbnail, caption. Pemilik akun yang
+mengunggah:
+
+1. TikTok → **+** → unggah video MP4.
+2. **Edit cover** → unggah dari galeri → pilih thumbnail PNG.
+3. Tempel caption. Opsional: tambahkan sound yang sedang tren dan kecilkan suara asli.
+4. Posting, atau simpan sebagai draf.
