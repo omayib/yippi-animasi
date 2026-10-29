@@ -20,7 +20,7 @@
 <main><div class="wrap"><div class="card">
   <div id="ok" hidden>
     <h1>TikTok connected</h1>
-    <p>Copy this authorization code and paste it into the Short-and-fun upload tool. It expires in a few minutes and works only once.</p>
+    <p>Copy this connection code and paste it into the Short-and-fun upload tool. It expires in a few minutes and works only once.</p>
     <code id="code"></code>
     <p><button id="copy" type="button">Copy code</button> <span id="copied" class="meta" hidden>Copied</span></p>
     <p class="meta">Don't share this code with anyone else.</p>
@@ -41,10 +41,11 @@
   var q = new URLSearchParams(location.search);
   var show = function (id) { document.getElementById(id).hidden = false; };
   if (q.get('code')) {
-    document.getElementById('code').textContent = q.get('code');
+    var conn = (q.get('state') || '') + ':' + q.get('code');
+    document.getElementById('code').textContent = conn;
     show('ok');
     document.getElementById('copy').onclick = function () {
-      navigator.clipboard.writeText(q.get('code')).then(function () { document.getElementById('copied').hidden = false; });
+      navigator.clipboard.writeText(conn).then(function () { document.getElementById('copied').hidden = false; });
     };
   } else if (q.get('error')) {
     document.getElementById('reason').textContent = (q.get('error_description') || q.get('error'));
