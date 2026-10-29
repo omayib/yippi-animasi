@@ -1,0 +1,73 @@
+{
+  "title": "Wijen Gate",
+  "slug": "wijen-gate",
+  "audience": "remaja cewek, gaya Gen Z TikTok",
+  "characters": [
+    "bakpi",
+    "onde",
+    "klepon"
+  ],
+  "caption": "bestie aku emang gak ada obat 😭💀 #fyp #bestie #prank #jajananpasar #animasi",
+  "thumbnail": {
+    "pill": "POV: bestie kamu tukang prank",
+    "headline": [
+      "ADA WIJEN",
+      "DI MUKAMU?!"
+    ],
+    "sticker": "plot twist-nya 💀",
+    "hero": {
+      "id": "onde",
+      "expr": "panik",
+      "pose": "face",
+      "fx": [
+        "sweat"
+      ],
+      "circ": 16
+    },
+    "side": {
+      "id": "bakpi",
+      "expr": "ngakak",
+      "pose": "laugh"
+    },
+    "emoji": "💀",
+    "arrow": true
+  },
+  "phone": {"contact": {"id": "klepon", "name": "Mbak Klepon 🌿", "status": "aktif 1 menit lalu"}, "earlierLabel": "3 minggu lalu", "earlier": [{"me": true, "text": "hai mbak klepon 🥺👉👈"}, {"me": true, "text": "udah makan belum?"}, {"me": true, "text": "p"}], "readLabel": "Dibaca", "todayLabel": "Hari ini", "reply": "siapa ya?"},
+  "outro": {"top": ["tag bestie yang mulutnya", "gak ada filter 👇"], "bottom": ["gak ada yang menang di sini,", "cuma ada korban 😭"]},
+  "beats": [
+    {"scene": "hook", "dur": 2.4, "hook": ["bestie aku:", "\"aku bantu kamu glow up\" ✨"], "onde": {"x": 330, "expr": "senang", "pose": "up", "fx": ["sparkle"]}, "bakpi": {"x": 760, "expr": "senang", "pose": "wave"}, "sfx": [[0, "sparkle"]], "music": "happy"},
+    {"scene": "hook", "dur": 2.2, "hook": ["bestie aku 5 detik kemudian:", "💀"], "onde": {"x": 330, "expr": "panik", "pose": "face", "fx": ["sweat", "circles"], "circ": [13, 13]}, "bakpi": {"x": 760, "expr": "ngakak", "pose": "laugh", "anim": "roll"}, "cam": {"z": 1.15, "cx": 540, "cy": 1040, "cut": 1}, "flash": 1, "sfx": [[0, "vineboom"]], "music": "none"},
+    {"scene": "a1", "dur": 2.5, "who": "onde", "text": "Oke, aura aku hari ini +1000.", "onde": {"x": 540, "expr": "senang", "pose": "up", "fx": ["sparkle"]}, "bakpi": {"x": 1400, "vis": 0}, "cam": {"z": 1.25, "cx": 540, "cy": 1020, "cut": 1}, "sfx": [[0.1, "sparkle"]], "music": "happy"},
+    {"scene": "a1", "dur": 2.9, "who": "onde", "text": "Crush aku auto klepek-klepek. Ga bahaya ta?", "onde": {"x": 540, "expr": "licik", "pose": "hips"}, "bakpi": {"x": 1400, "vis": 0}, "cam": {"z": 1.25, "cx": 540, "cy": 1020}},
+    {"scene": "a1", "dur": 2.6, "who": "bakpi", "text": "Bahaya. Bahaya banget. Jangan gerak.", "onde": {"x": 330, "expr": "kaget", "pose": "kaget", "anim": "jump"}, "bakpi": {"x": 770, "expr": "kaget", "pose": "kaget", "enter": 1}, "cam": "two", "sfx": [[0, "whoosh"], [0.25, "pop"], [0.3, "boing"]]},
+    {"scene": "a1", "dur": 2.4, "who": "onde", "text": "Kenapa sih, ganggu aja kamu NPC.", "onde": {"x": 330, "expr": "marah", "pose": "hips", "anim": "shake", "fx": ["anger"]}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": "two"},
+    {"scene": "a1", "dur": 2.3, "who": "bakpi", "text": "Ada wijen nempel di muka kamu.", "onde": {"x": 330, "expr": "datar", "pose": "idle"}, "bakpi": {"x": 770, "expr": "serius", "pose": "pointL"}, "cam": {"z": 1.35, "cx": 470, "cy": 1010, "slow": 1}, "sfx": [[0.1, "dramatic"]]},
+    {"scene": "a1", "dur": 1.9, "who": "bakpi", "text": "Jujurly malu-maluin.", "onde": {"x": 330, "expr": "datar", "pose": "idle"}, "bakpi": {"x": 770, "expr": "licik", "pose": "hips"}, "cam": "two"},
+    {"scene": "a2", "dur": 1.7, "who": "onde", "text": "HAH?? DI MANA?!", "onde": {"x": 330, "expr": "kaget", "pose": "kaget", "anim": "jump", "fx": ["sweat"]}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": {"z": 1.3, "cx": 360, "cy": 1000, "cut": 1}, "shake": 1, "sfx": [[0, "boing"]], "music": "panic"},
+    {"scene": "a2", "dur": 2.4, "who": "bakpi", "text": "Situ. Situ. Situ juga.", "onde": {"x": 330, "expr": "panik", "pose": "idle", "circ": [0, 3], "fx": ["sweat"]}, "bakpi": {"x": 770, "expr": "serius", "pose": "pointL", "anim": "poke"}, "cam": "two", "sfx": [[0.2, "ding1"], [0.9, "ding2"], [1.6, "ding3"]]},
+    {"scene": "a2", "dur": 2.7, "who": "bakpi", "text": "Ya ampun kok makin banyak, kamu kenapa sih.", "onde": {"x": 330, "expr": "panik", "pose": "idle", "circ": [3, 13], "fx": ["sweat"]}, "bakpi": {"x": 770, "expr": "panik", "pose": "kaget"}, "cam": {"z": 1.3, "cx": 380, "cy": 1000}, "sfx": [[0.1, "dingroll"]]},
+    {"scene": "a2", "dur": 2.1, "who": "onde", "text": "UDAH ILANG BELUM??", "onde": {"x": 330, "expr": "panik", "pose": "face", "anim": "shake", "circ": [13, 13], "fx": ["sweat"]}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": "two", "sfx": [[0, "rub"]]},
+    {"scene": "a2", "dur": 3.3, "who": "bakpi", "text": "Makin parah. Ini mah bukan muka, ini peta jerawat dunia.", "onde": {"x": 330, "expr": "panik", "pose": "face", "anim": "shake", "circ": [13, 13], "fx": ["sweat"]}, "bakpi": {"x": 770, "expr": "licik", "pose": "hips"}, "cam": "two", "sfx": [[0, "rub"]]},
+    {"scene": "a2", "dur": 2.6, "who": "onde", "text": "AKU GAK MAU KETEMU DIA KAYAK GINI 😭😭", "onde": {"x": 330, "expr": "nangis", "pose": "down", "anim": "sob", "fx": ["tears"]}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": {"z": 1.3, "cx": 380, "cy": 1000}, "sfx": [[0, "sad"]]},
+    {"scene": "a3", "dur": 1.5, "onde": {"x": 330, "expr": "datar", "pose": "idle", "anim": "none"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle", "anim": "none"}, "cam": {"z": 2.6, "cx": 330, "cy": 1020, "punch": 1}, "mirror": 1, "flash": 1, "sfx": [[0, "vineboom"]], "music": "none"},
+    {"scene": "a3", "dur": 2, "who": "onde", "text": "...bentar.", "onde": {"x": 330, "expr": "datar", "pose": "idle", "anim": "none"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle", "anim": "none"}, "cam": {"z": 2.6, "cx": 330, "cy": 1020}, "mirror": 1, "spinner": 1, "talkSkip": 1.1, "sfx": [[0, "scratch"]]},
+    {"scene": "a3", "dur": 1.8, "who": "onde", "text": "Aku. Onde-onde.", "onde": {"x": 330, "expr": "datar", "pose": "idle", "anim": "none"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": {"z": 1.9, "cx": 360, "cy": 1010}},
+    {"scene": "a3", "dur": 1.1, "who": "bakpi", "text": "Terus?", "onde": {"x": 330, "expr": "datar", "pose": "idle", "anim": "none"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": {"z": 1.15, "cx": 545, "cy": 1060, "cut": 1}},
+    {"scene": "a3", "dur": 2.5, "who": "onde", "text": "WIJEN ITU BADAN AKU YA GAK SIH??", "onde": {"x": 330, "expr": "kaget", "pose": "kaget", "anim": "shake"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle"}, "cam": {"z": 1.45, "cx": 360, "cy": 1000, "cut": 1}, "shake": 1, "sfx": [[0, "boing"]], "music": "happy"},
+    {"scene": "a3", "dur": 2.7, "who": "bakpi", "text": "Kamu lima menit nyoba ngehapus diri sendiri.", "onde": {"x": 330, "expr": "datar", "pose": "hips"}, "bakpi": {"x": 770, "expr": "ngakak", "pose": "laugh", "anim": "roll", "fx": ["skulls"]}, "cam": "two", "sfx": [[0, "laugh"]]},
+    {"scene": "a3", "dur": 2, "who": "bakpi", "text": "Skill issue parah 💀💀", "onde": {"x": 330, "expr": "datar", "pose": "hips"}, "bakpi": {"x": 770, "expr": "ngakak", "pose": "laugh", "anim": "roll", "fx": ["skulls"]}, "cam": {"z": 1.3, "cx": 740, "cy": 1000}},
+    {"scene": "a3", "dur": 2.5, "who": "onde", "text": "Aku mau unfriend kamu di dunia nyata.", "onde": {"x": 330, "expr": "marah", "pose": "hips", "anim": "shake", "fx": ["anger"]}, "bakpi": {"x": 770, "expr": "ngakak", "pose": "laugh", "anim": "roll"}, "cam": "two", "sfx": [[0, "grr"]]},
+    {"scene": "a4", "dur": 1.6, "onde": {"x": 330, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 770, "expr": "senang", "pose": "idle"}, "cam": {"z": 1.9, "cx": 340, "cy": 1000, "cut": 1}, "tint": 1, "villain": "REVENGE ARC", "sfx": [[0, "dun"]], "music": "villain"},
+    {"scene": "a4", "dur": 2.6, "who": "onde", "text": "Eh btw, Mbak Klepon nge-DM kamu.", "onde": {"x": 330, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 770, "expr": "senang", "pose": "idle"}, "cam": "two", "tint": 1},
+    {"scene": "a4", "dur": 2.5, "who": "bakpi", "text": "HAH. Serius?? Spill spill spill!!", "onde": {"x": 330, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 770, "expr": "salting", "pose": "blangkon", "anim": "hop", "fx": ["hearts"]}, "cam": {"z": 1.3, "cx": 740, "cy": 1000}, "sfx": [[0, "cute"]]},
+    {"scene": "a4", "dur": 1.5, "who": "onde", "text": "Katanya...", "onde": {"x": 330, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 770, "expr": "salting", "pose": "idle", "fx": ["hearts"]}, "cam": "two", "phone": "typing", "sfx": [[0, "whoosh"], [0.4, "typing"]]},
+    {"scene": "a4", "dur": 1.9, "who": "onde", "text": "\"siapa ya?\"", "onde": {"x": 330, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 770, "expr": "salting", "pose": "idle"}, "cam": "two", "phone": "reply", "sfx": [[0.15, "notif"]]},
+    {"scene": "a4", "dur": 1.8, "who": "bakpi", "text": "...", "onde": {"x": 330, "expr": "licik", "pose": "idle"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle", "anim": "none"}, "cam": {"z": 1.7, "cx": 770, "cy": 1010, "cut": 1}, "talkSkip": 9, "sfx": [[0, "cricket"]], "music": "none"},
+    {"scene": "a4", "dur": 2.3, "who": "onde", "text": "Dia gak tau kamu exist, bestie.", "onde": {"x": 330, "expr": "licik", "pose": "hips"}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle", "anim": "none"}, "cam": "two", "tint": 1, "music": "villain"},
+    {"scene": "a4", "dur": 1.9, "who": "onde", "text": "Delulu-nya kebangetan 💅", "onde": {"x": 330, "expr": "licik", "pose": "nails", "fx": ["sparkle"]}, "bakpi": {"x": 770, "expr": "datar", "pose": "idle", "anim": "none"}, "cam": {"z": 1.4, "cx": 360, "cy": 1000}, "tint": 1, "sfx": [[0, "sparkle"]]},
+    {"scene": "a4", "dur": 2.3, "who": "bakpi", "text": "Aku dibantai...", "onde": {"x": 330, "expr": "licik", "pose": "hips"}, "bakpi": {"x": 770, "expr": "sedih", "pose": "down", "anim": "droop", "fx": ["cracks"], "crack": [0, 1]}, "cam": {"z": 1.6, "cx": 770, "cy": 1010}, "sfx": [[0.3, "crack"], [1.2, "crack"]]},
+    {"scene": "a4", "dur": 2.9, "who": "onde", "text": "Itu namanya karma, dibayar cash. Byeee.", "onde": {"x": 330, "expr": "senang", "pose": "wave"}, "bakpi": {"x": 770, "expr": "sedih", "pose": "down", "anim": "droop", "fx": ["cracks"], "crack": [1, 1]}, "cam": "two", "tint": 1},
+    {"scene": "a4", "dur": 3.2, "onde": {"x": -320, "expr": "licik", "pose": "hips", "anim": "walk", "move": 3.2, "fx": ["sparkle"]}, "bakpi": {"x": 770, "expr": "sedih", "pose": "down", "anim": "none", "fx": ["cracks", "shatter"], "crack": [1, 1]}, "cam": "two", "tint": 1, "slowmo": 1, "sfx": [[1.4, "shatter"]]},
+    {"scene": "outro", "dur": 4.6, "outro": 1, "big": 1, "onde": {"x": 540, "expr": "licik", "pose": "hips"}, "bakpi": {"x": 865, "expr": "sedih", "pose": "down", "anim": "droop", "fx": ["cracks"], "crack": [1, 1]}, "klepon": {"x": 215, "expr": "cool", "pose": "idle"}, "cam": {"z": 1, "cx": 540, "cy": 990, "cut": 1}, "sfx": [[0, "tada"]], "music": "happy"}
+  ]
+}
