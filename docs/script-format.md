@@ -15,7 +15,7 @@ Contoh lengkap: [`scripts/wijen-gate.json`](../scripts/wijen-gate.json).
 | `slug` | ya | Nama file output, huruf kecil-strip, mis. `wijen-gate` |
 | `audience` | – | Catatan target audiens |
 | `topic` | – | Tren/isu yang diangkat + sumbernya (untuk arsip) |
-| `caption` | – | Caption TikTok + hashtag, disimpan ke `<slug>-caption.txt` |
+| `description` | ya | Deskripsi postingan TikTok, satu string atau daftar baris. Disimpan ke `<slug>-description.txt`. Lihat [style guide](style-guide.md#9-deskripsi-postingan). (`caption` lama masih dibaca.) |
 | `thumbnail` | – | Cover TikTok, lihat [Thumbnail](#thumbnail) |
 | `phone` | – | Isi layar HP saat beat memakai `phone`, lihat [HP](#layar-hp) |
 | `outro` | – | `{"top": ["baris 1", "baris 2"], "bottom": [...]}` teks kartu penutup (kotak putih atas, kotak hitam bawah) |

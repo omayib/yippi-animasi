@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Render a yippi-animasi script into a TikTok-ready MP4 + cover image.
 //
-//   node render.js scripts/wijen-gate.json            video + thumbnail + caption
+//   node render.js scripts/wijen-gate.json            video + thumbnail + description
 //   node render.js scripts/wijen-gate.json --voice    add gibberish cartoon voices
 //   node render.js scripts/wijen-gate.json --thumb    thumbnail only
 //   node render.js scripts/wijen-gate.json --stills 3,12.5,40   preview frames as JPEG
@@ -65,7 +65,9 @@ function run(cmd, argv) {
     fs.writeFileSync(path.join(outDir, `${slug}-thumbnail.png`), await grab(null, 'png'));
     console.log('thumbnail ok');
   }
-  if (script.caption) fs.writeFileSync(path.join(outDir, `${slug}-caption.txt`), script.caption + '\n');
+  const desc = script.description || script.caption;
+  if (desc) fs.writeFileSync(path.join(outDir, `${slug}-description.txt`), (Array.isArray(desc) ? desc.join('\n') : desc) + '\n');
+  else console.warn('No description in the script: add "description" so the upload text is ready.');
 
   if (opt('--stills')) {
     for (const t of opt('--stills').split(',').map(Number)) {

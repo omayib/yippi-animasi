@@ -1,10 +1,10 @@
 # Workflow: dari ide ke video siap upload
 
-Hasil akhir setiap putaran: **video MP4, thumbnail PNG, dan caption** di `out/<slug>/`.
+Hasil akhir setiap putaran: **video MP4, thumbnail PNG, dan deskripsi postingan** di `out/<slug>/`.
 Upload ke TikTok dilakukan manual oleh pemilik akun.
 
 Sebelum mulai, baca [docs/style-guide.md](docs/style-guide.md): siapa penontonnya, format,
-humor, tema, bahasa, hook, thumbnail, dan batasan.
+humor, tema, bahasa, hook, thumbnail, deskripsi postingan, dan batasan.
 
 ## 1. Cari bahan (10–15 menit)
 
@@ -42,14 +42,14 @@ Pemilik akun memilih satu ide.
   kartu penutup.
 - Maksimal 2–3 slang per video, satu momen hangat, tanpa ceramah.
 - Tulis sebagai JSON sesuai [docs/script-format.md](docs/script-format.md), simpan di
-  `scripts/<slug>.json`. Isi `topic` (tren + link), `caption` (+ 3–5 hashtag), `thumbnail`,
+  `scripts/<slug>.json`. Isi `topic` (tren + link), `description` (lihat style guide bagian 9), `thumbnail`,
   dan `outro`.
 
 ## 5. Render dan periksa
 
 ```bash
 node render.js scripts/<slug>.json --stills 1,8,20,35   # cek frame dulu
-node render.js scripts/<slug>.json                       # video + thumbnail + caption
+node render.js scripts/<slug>.json                       # video + thumbnail + deskripsi
 ```
 
 Periksa stills: subtitle tidak menabrak karakter, karakter tidak terpotong, teks HP muat,
@@ -57,10 +57,11 @@ thumbnail terbaca saat dikecilkan.
 
 ## 6. Serahkan
 
-Kirim ke pemilik akun: ringkasan tren + sumber, video, thumbnail, caption. Pemilik akun yang
+Kirim ke pemilik akun: ringkasan tren + sumber, video, thumbnail, dan **deskripsi postingan ditulis
+langsung di pesan** (siap disalin), selain file `<slug>-description.txt`. Pemilik akun yang
 mengunggah:
 
 1. TikTok → **+** → unggah video MP4.
 2. **Edit cover** → unggah dari galeri → pilih thumbnail PNG.
-3. Tempel caption. Opsional: tambahkan sound yang sedang tren dan kecilkan suara asli.
+3. Tempel deskripsi. Opsional: tambahkan sound yang sedang tren dan kecilkan suara asli.
 4. Posting, atau simpan sebagai draf.

@@ -107,7 +107,20 @@ Hook harus terbaca tanpa suara: teks besar di kotak putih, maksimal 2 baris.
 - Konsisten antarvideo: palet pink-kuning, font tebal yang sama, posisi judul yang sama, supaya
   profil terlihat seperti satu seri.
 
-## 9. Batasan
+## 9. Deskripsi postingan
+
+Setiap video selesai selalu disertai deskripsi siap tempel:
+
+1. **Baris 1: hook ulang** dengan kata-kata berbeda dari teks di video (yang terlihat di feed
+   sebelum "lainnya").
+2. **Baris 2: teaser** satu kalimat tentang konfliknya. **Jangan bocorkan twist.**
+3. **Baris 3: ajakan komentar** berupa pertanyaan yang gampang dijawab atau ajakan tag teman.
+4. **Baris 4: 4–5 hashtag**: 1 tren/format, 1–2 tema (crush, bestie), lalu `#animasi
+   #jajananpasar` sebagai penanda seri. Tanpa `#fyp`-spam berderet.
+
+Bahasa santai huruf kecil, maksimal 2 emoji per baris, total di bawah 300 karakter.
+
+## 10. Batasan
 
 Tidak pernah: musibah dan kematian, politik praktis, SARA, kasus hukum, orang sungguhan (nama,
 wajah, akun), merek atau karakter milik pihak lain sebagai bahan utama, body shaming, konten
