@@ -48,7 +48,8 @@ Satu beat = satu baris dialog atau satu momen. Durasi total video = jumlah `dur`
 | `talkSkip` | Detik awal beat di mana mulut belum bergerak. |
 | `tint` | `1` filter ungu ala villain. |
 | `villain` | Teks besar merah, mis. `"REVENGE ARC"`. |
-| `phone` | `"typing"` lalu `"reply"`: layar HP naik dan balasan muncul. |
+| `phone` | `{"show": n}` layar chat menampilkan `n` pesan pertama dari `script.phone.thread`, pesan terbaru muncul dengan animasi; tambah `"typing": true` untuk indikator mengetik. Format lama `"typing"`/`"reply"` masih bisa. |
+| `rec` | `1` tampilan sedang merekam (titik merah REC + bingkai kamera). |
 | `slowmo` | `1` gerakan melambat + label `0.5x`. |
 | `outro` | `1` kartu penutup dengan teks dari `script.outro`. |
 | `big` | `1` karakter lebih besar (dipakai di outro). |
@@ -104,3 +105,15 @@ Judul dan wajah karakter utama berada di area tengah 3:4 supaya utuh di grid pro
 ```
 
 Maksimal 4 pesan di `earlier`. `me: true` = pesan keluar (biru, kanan).
+
+Untuk percakapan yang muncul bertahap, isi `thread` dan pakai `"phone": {"show": n}` di tiap beat
+(lihat [`scripts/jawab-satu-kata.json`](../scripts/jawab-satu-kata.json)):
+
+```json
+"phone": {
+  "contact": {"id": "klepon", "name": "Mbak Klepon 🌿", "status": "online"},
+  "thread": [{"me": true, "text": "Kita cocok gak?"}, {"me": false, "text": "Gak."}]
+}
+```
+
+Pesan panjang otomatis dibungkus ke beberapa baris; layar menggulir sendiri saat penuh.

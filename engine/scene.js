@@ -366,6 +366,55 @@ function phoneOverlay(ctx, stage, lt) {
   else { const s = easeOutBack(lt / 0.3); ctx.save(); ctx.translate(-w / 2 + 50, ry); ctx.scale(s, s); bub(0, 0, ph.reply, false); ctx.restore(); }
   ctx.restore();
 }
+// Chat that unfolds over several beats. beat.phone = {show: n, typing: true}; messages come from
+// script.phone.thread = [{me: true, text: "..."}, ...]. The newest visible message pops in.
+function chatOverlay(ctx, opt, lt, slideIn) {
+  const ph = Object.assign({}, PHONE_DEFAULT, (SCRIPT && SCRIPT.phone) || {});
+  const thread = ph.thread || [];
+  const n = Math.min(opt.show || 0, thread.length);
+  const k = slideIn ? easeOutBack(lt / 0.4) : 1;
+  const w = 660, h = 1020;
+  ctx.save(); ctx.translate(540, 800 + (1 - k) * 1200); ctx.rotate(-0.02);
+  ctx.fillStyle = '#1E1E1E'; ctx.beginPath(); ctx.roundRect(-w / 2, -h / 2, w, h, 64); ctx.fill();
+  ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.roundRect(-w / 2 + 22, -h / 2 + 22, w - 44, h - 44, 44); ctx.fill();
+  ctx.fillStyle = '#1E1E1E'; ctx.beginPath(); ctx.roundRect(-70, -h / 2 + 34, 140, 30, 15); ctx.fill();
+  ctx.fillStyle = '#F3F1EC'; ctx.fillRect(-w / 2 + 22, -h / 2 + 80, w - 44, 124);
+  ctx.save(); ctx.beginPath(); ctx.arc(-w / 2 + 94, -h / 2 + 142, 44, 0, Math.PI * 2); ctx.fillStyle = '#E7F4DF'; ctx.fill(); ctx.clip();
+  drawHead(ctx, (ph.contact && ph.contact.id) || 'klepon', -w / 2 + 94, -h / 2 + 155, 0.38); ctx.restore();
+  ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#1E1E1E'; ctx.font = `800 40px ${FONT}`; ctx.fillText(ph.contact.name || '', -w / 2 + 156, -h / 2 + 124);
+  ctx.font = `600 27px ${FONT}`; ctx.fillStyle = opt.typing ? '#1D9E75' : '#8A8A85'; ctx.fillText(opt.typing ? 'sedang mengetik...' : (ph.contact.status || ''), -w / 2 + 156, -h / 2 + 166);
+  // message area
+  const top = -h / 2 + 220, bottom = h / 2 - 50, maxW = w - 170, pad = 26, lh = 48;
+  ctx.font = `600 38px ${FONT}`;
+  const items = thread.slice(0, n).map((m) => { const lines = wrap(ctx, m.text, maxW - 2 * pad); const tw = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 2 * pad; return { ...m, lines, tw, bh: lines.length * lh + 30 }; });
+  if (opt.typing) items.push({ typing: true, me: false, tw: 140, bh: 78 });
+  const gap = 18; const total = items.reduce((a, it) => a + it.bh + gap, 0);
+  let y = Math.min(top + 10, bottom - total);
+  ctx.save(); ctx.beginPath(); ctx.rect(-w / 2 + 22, top, w - 44, bottom - top + 20); ctx.clip();
+  items.forEach((it, i) => {
+    const isNew = (i === n - 1 && !it.typing && !opt.typing) || it.typing;
+    const sc = isNew && !it.typing ? easeOutBack(lt / 0.28) : 1;
+    const bx = it.me ? w / 2 - 50 - it.tw : -w / 2 + 50;
+    ctx.save(); ctx.translate(it.me ? bx + it.tw : bx, y + it.bh / 2); ctx.scale(sc, sc); ctx.translate(-(it.me ? bx + it.tw : bx), -(y + it.bh / 2));
+    ctx.fillStyle = it.me ? '#378ADD' : '#ECEAE4'; ctx.beginPath(); ctx.roundRect(bx, y, it.tw, it.bh, 34); ctx.fill();
+    if (it.typing) { for (let j = 0; j < 3; j++) circ(ctx, bx + 40 + j * 30, y + 39 - Math.max(0, Math.sin(lt * 9 - j)) * 8, 9, '#9A9A94'); }
+    else { ctx.fillStyle = it.me ? '#FFFFFF' : '#1E1E1E'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.font = `600 38px ${FONT}`;
+      it.lines.forEach((l, j) => ctx.fillText(l, bx + pad, y + 15 + lh / 2 + j * lh)); }
+    ctx.restore();
+    y += it.bh + gap;
+  });
+  ctx.restore(); ctx.restore();
+}
+function recBadge(ctx, t, lt) {
+  ctx.save();
+  if (Math.floor(t * 2) % 2 === 0) circ(ctx, 92, 230, 16, '#E8262A');
+  ctx.font = `800 44px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#1E1E1E'; ctx.lineWidth = 10; ctx.lineJoin = 'round';
+  const sec = Math.floor(lt + 314); const txt = `REC ${String(Math.floor(sec / 60)).padStart(2, '0')}:${String(sec % 60).padStart(2, '0')}`;
+  ctx.strokeText(txt, 122, 232); ctx.fillText(txt, 122, 232);
+  ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 10; ctx.lineCap = 'round';
+  for (const [x, y, dx, dy] of [[50, 160, 1, 1], [1030, 160, -1, 1], [50, 1760, 1, -1], [1030, 1760, -1, -1]]) { ctx.beginPath(); ctx.moveTo(x, y + dy * 90); ctx.lineTo(x, y); ctx.lineTo(x + dx * 90, y); ctx.stroke(); }
+  ctx.restore();
+}
 function outroCard(ctx, lt) {
   const k1 = easeOutBack((lt - 0.2) / 0.35), k2 = easeOutBack((lt - 1.2) / 0.35);
   ctx.save(); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
@@ -445,7 +494,9 @@ function render(t) {
   if (b.villain) { const k = easeOutBack(lt / 0.3); ctx.save(); ctx.translate(540, 360); ctx.scale(k, k); ctx.rotate(-0.05);
     ctx.font = `800 110px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineWidth = 18; ctx.strokeStyle = '#1E1E1E'; ctx.lineJoin = 'round'; ctx.strokeText(b.villain, 0, 0); ctx.fillStyle = '#E24B4A'; ctx.fillText(b.villain, 0, 0); ctx.restore(); }
   if (b.spinner) spinner(ctx, t, b.spinner);
-  if (b.phone) phoneOverlay(ctx, b.phone, lt);
+  if (b.phone && typeof b.phone === 'object') chatOverlay(ctx, b.phone, lt, !(bi > 0 && BEATS[bi - 1].phone));
+  else if (b.phone) phoneOverlay(ctx, b.phone, lt);
+  if (b.rec) recBadge(ctx, t, lt);
   if (b.slowmo) { ctx.save(); ctx.font = `800 46px ${FONT}`; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center'; ctx.globalAlpha = 0.6 + 0.4 * Math.sin(t * 6); ctx.fillText('▶ 0.5x', 540, 300); ctx.restore(); }
   if (b.hook) hookText(ctx, b.hook, lt);
   if (b.outro) outroCard(ctx, lt);
@@ -471,7 +522,10 @@ function validateScript(s) {
     if (b.text && b.dur < 0.6 + b.text.length * 0.035) err.push(`${at}: dur ${b.dur}s is too short to read "${b.text}"`);
     if (b.music && !MUSIC.includes(b.music)) err.push(`${at}: unknown music "${b.music}"`);
     for (const [off, name] of b.sfx || []) { if (!SFX_NAMES.includes(name)) err.push(`${at}: unknown sfx "${name}"`); if (off > b.dur) err.push(`${at}: sfx "${name}" starts after the beat ends`); }
-    if (b.phone && !['typing', 'reply'].includes(b.phone)) err.push(`${at}: phone must be "typing" or "reply"`);
+    if (b.phone && typeof b.phone === 'object') {
+      const th = (s.phone && s.phone.thread) || [];
+      if (!(b.phone.show >= 0) || b.phone.show > th.length) err.push(`${at}: phone.show must be between 0 and ${th.length} (script.phone.thread length)`);
+    } else if (b.phone && !['typing', 'reply'].includes(b.phone)) err.push(`${at}: phone must be "typing", "reply", or {"show": n}`);
     for (const id of Object.keys(CH)) {
       const c = b[id]; if (!c || c.vis === 0) continue;
       if (typeof c.x !== 'number') err.push(`${at}.${id}: x is required`);

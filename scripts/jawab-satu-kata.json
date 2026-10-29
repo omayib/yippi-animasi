@@ -1,0 +1,116 @@
+{
+  "title": "Jawab Satu Kata",
+  "slug": "jawab-satu-kata",
+  "audience": "cewek 16-24, gaya Gen Z TikTok",
+  "topic": {
+    "trend": "Answer in One Word (format chat jawaban satu kata, tren TikTok Oktober 2026)",
+    "source": "https://newengen.com/insights/october-tiktok-trends/"
+  },
+  "characters": [
+    "bakpi",
+    "onde",
+    "klepon"
+  ],
+  "caption": "jawab satu kata katanya 🙂 delulu boleh, relulu wajib #fyp #jawabsatukata #crush #animasi #jajananpasar",
+  "thumbnail": {
+    "pill": "POV: minta crush jawab satu kata",
+    "headline": [
+      "JAWAB",
+      "SATU KATA"
+    ],
+    "sticker": "ending-nya 💀",
+    "hero": {
+      "id": "bakpi",
+      "expr": "kaget",
+      "pose": "phone",
+      "fx": [
+        "cracks"
+      ],
+      "crack": 0.5
+    },
+    "side": {
+      "id": "klepon",
+      "expr": "cool",
+      "pose": "idle"
+    },
+    "emoji": "💀",
+    "arrow": false
+  },
+  "phone": {
+    "contact": {
+      "id": "klepon",
+      "name": "Mbak Klepon 🌿",
+      "status": "online"
+    },
+    "thread": [
+      {
+        "me": true,
+        "text": "Mbak, jawab pake satu kata ya 🥺"
+      },
+      {
+        "me": false,
+        "text": "Ok."
+      },
+      {
+        "me": true,
+        "text": "Aku menurut mbak gimana?"
+      },
+      {
+        "me": false,
+        "text": "Siapa."
+      },
+      {
+        "me": true,
+        "text": "Kita cocok gak?"
+      },
+      {
+        "me": false,
+        "text": "Gak."
+      },
+      {
+        "me": true,
+        "text": "Ada kesempatan gak? 👉👈"
+      },
+      {
+        "me": false,
+        "text": "Ada."
+      },
+      {
+        "me": false,
+        "text": "Di kehidupan selanjutnya."
+      }
+    ]
+  },
+  "outro": {
+    "top": [
+      "tag teman yang",
+      "masih delulu 🙂"
+    ],
+    "bottom": [
+      "delulu boleh,",
+      "relulu wajib 💅"
+    ]
+  },
+  "beats": [
+    {"scene": "hook", "dur": 2.4, "hook": ["POV: minta crush", "jawab satu kata 🙂"], "bakpi": {"x": 760, "expr": "salting", "pose": "phone", "fx": ["hearts"]}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050, "cut": 1}, "sfx": [[0, "cute"]], "music": "happy"},
+    {"scene": "a1", "dur": 2.7, "who": "bakpi", "text": "Oke. Mbak Klepon harus jawab pake satu kata doang.", "bakpi": {"x": 760, "expr": "licik", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}},
+    {"scene": "a1", "dur": 1.5, "phone": {"show": 1}, "bakpi": {"x": 760, "expr": "salting", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "whoosh"], [0.35, "pop"]]},
+    {"scene": "a1", "dur": 1.5, "phone": {"show": 2}, "bakpi": {"x": 760, "expr": "salting", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "notif"]]},
+    {"scene": "a1", "dur": 1.5, "phone": {"show": 3}, "bakpi": {"x": 760, "expr": "salting", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "pop"]]},
+    {"scene": "a1", "dur": 1.7, "phone": {"show": 4}, "bakpi": {"x": 760, "expr": "datar", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "notif"]]},
+    {"scene": "a2", "dur": 2.6, "who": "bakpi", "text": "...gapapa. Itu namanya jual mahal.", "bakpi": {"x": 760, "expr": "serius", "pose": "phone", "anim": "none"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050, "cut": 1}, "sfx": [[0, "cricket"]]},
+    {"scene": "a2", "dur": 1.4, "phone": {"show": 5}, "bakpi": {"x": 760, "expr": "salting", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "whoosh"], [0.3, "pop"]]},
+    {"scene": "a2", "dur": 1.6, "phone": {"show": 6}, "bakpi": {"x": 760, "expr": "sedih", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "notif"], [0.25, "dramatic"]]},
+    {"scene": "a2", "dur": 2.0, "who": "bakpi", "text": "Oke. Aku cooked.", "bakpi": {"x": 760, "expr": "sedih", "pose": "down", "anim": "droop"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050, "cut": 1}, "sfx": [[0, "sad"]], "music": "none"},
+    {"scene": "a2", "dur": 1.6, "phone": {"show": 7}, "bakpi": {"x": 760, "expr": "salting", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "whoosh"], [0.3, "pop"]], "music": "panic"},
+    {"scene": "a2", "dur": 2.0, "phone": {"show": 7, "typing": true}, "bakpi": {"x": 760, "expr": "panik", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0.2, "typing"], [1.1, "typing"]], "music": "none"},
+    {"scene": "a2", "dur": 1.3, "phone": {"show": 8}, "bakpi": {"x": 760, "expr": "kaget", "pose": "phone"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "sfx": [[0, "notif"]]},
+    {"scene": "a3", "dur": 2.4, "who": "bakpi", "text": "ADA KATANYA!! ADA!!", "bakpi": {"x": 760, "expr": "salting", "pose": "up", "anim": "hop", "fx": ["hearts"]}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050, "cut": 1}, "shake": 1, "sfx": [[0, "cute"], [0.4, "sparkle"]], "music": "happy"},
+    {"scene": "a3", "dur": 2.0, "phone": {"show": 9}, "bakpi": {"x": 760, "expr": "salting", "pose": "up"}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050}, "flash": 1, "sfx": [[0, "vineboom"]], "music": "none"},
+    {"scene": "a3", "dur": 2.2, "who": "bakpi", "text": "Mbak. Itu tiga kata.", "bakpi": {"x": 760, "expr": "kaget", "pose": "kaget", "anim": "shake", "fx": ["cracks"], "crack": [0, 0.5]}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.8, "cx": 760, "cy": 1050, "cut": 1}, "sfx": [[0.2, "crack"]]},
+    {"scene": "a4", "dur": 2.9, "who": "onde", "text": "Udah aku rekam. Langsung ke grup kelas.", "bakpi": {"x": 760, "expr": "kaget", "pose": "kaget", "anim": "none", "fx": ["cracks"], "crack": [0.5, 0.5]}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.15, "cx": 515, "cy": 1060, "punch": 1}, "rec": 1, "tint": 1, "sfx": [[0, "dun"]], "music": "villain"},
+    {"scene": "a4", "dur": 1.6, "who": "bakpi", "text": "HAPUS GAK?!", "bakpi": {"x": 760, "expr": "marah", "pose": "hips", "anim": "shake", "fx": ["anger", "cracks"], "crack": [0.5, 0.5]}, "onde": {"x": 250, "expr": "licik", "pose": "phone"}, "cam": {"z": 1.15, "cx": 515, "cy": 1060}, "rec": 1, "tint": 1, "sfx": [[0, "grr"]]},
+    {"scene": "a4", "dur": 2.4, "who": "onde", "text": "Jawab satu kata: Gak. 💅", "bakpi": {"x": 760, "expr": "sedih", "pose": "down", "anim": "droop", "fx": ["cracks"], "crack": [0.5, 0.5]}, "onde": {"x": 250, "expr": "licik", "pose": "nails", "fx": ["sparkle"]}, "cam": {"z": 1.45, "cx": 330, "cy": 1050, "cut": 1}, "rec": 1, "tint": 1, "sfx": [[0, "sparkle"]]},
+    {"scene": "outro", "dur": 4.0, "outro": 1, "big": 1, "klepon": {"x": 215, "expr": "cool", "pose": "idle"}, "onde": {"x": 540, "expr": "licik", "pose": "phone"}, "bakpi": {"x": 865, "expr": "sedih", "pose": "down", "anim": "droop", "fx": ["cracks"], "crack": [0.5, 0.5]}, "cam": {"z": 1.0, "cx": 540, "cy": 990, "cut": 1}, "sfx": [[0, "tada"]], "music": "happy"}
+  ]
+}
