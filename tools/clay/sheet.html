@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Pop";src:url("../../engine/fonts/Poppins-Bold.ttf");font-weight:600 900}
+@font-face{font-family:"Pop";src:url("../../engine/fonts/Poppins-Medium.ttf");font-weight:100 599}
+html,body{margin:0}</style></head><body><canvas id="c"></canvas>
+<script src="../../engine/clay.js"></script>
+<script>
+const ORDER = ['waffi', 'beri', 'matcha', 'vani'];
+function lineup() {
+  const cv = document.getElementById('c'); cv.width = 2000; cv.height = 1300; const ctx = cv.getContext('2d');
+  Clay.clayBackdrop(ctx, 2000, 1300, { floor: 0.66 });
+  let w = Clay.clayText(ctx, 'YIPPI', 770, 150, 130, '#E07A8A', { rot: -0.03 });
+  Clay.clayText(ctx, 'SQUAD', 1265, 150, 130, '#8DB86B', { rot: 0.02 });
+  const poses = { waffi: ['licik', 'phone'], beri: ['senang', 'cheek'], matcha: ['cool', 'idle'], vani: ['lembut', 'wave'] };
+  ORDER.forEach((id, i) => {
+    const x = 290 + i * 475, y = 1040;
+    Clay.drawClayChar(ctx, id, x, y, 1.18, poses[id][0], poses[id][1]);
+    const C = Clay.YIPPI_SQUAD[id];
+    ctx.save(); ctx.textAlign = 'center'; ctx.font = '800 52px "Pop"'; ctx.fillStyle = '#5A3A26'; ctx.fillText(C.name, x, y + 105);
+    ctx.font = '500 30px "Pop"'; ctx.fillStyle = '#8A6A52'; const parts = C.role.split(', '); parts.forEach((l, k) => ctx.fillText(l + (k < parts.length - 1 ? ',' : ''), x, y + 148 + k * 38)); ctx.restore();
+  });
+  return cv.toDataURL('image/png');
+}
+function expressions() {
+  const ex = ['senang', 'kaget', 'licik', 'marah', 'sedih', 'ngakak'];
+  const cv = document.getElementById('c'); cv.width = 2100; cv.height = 2000; const ctx = cv.getContext('2d');
+  Clay.clayBackdrop(ctx, 2100, 2000, { floor: 0.98 });
+  ctx.save(); ctx.font = '800 40px "Pop"'; ctx.fillStyle = '#8A6A52'; ctx.textAlign = 'center';
+  ex.forEach((e, j) => ctx.fillText(e, 330 + j * 300, 80)); ctx.restore();
+  ORDER.forEach((id, i) => {
+    const C = Clay.YIPPI_SQUAD[id];
+    ctx.save(); ctx.font = '800 40px "Pop"'; ctx.fillStyle = '#5A3A26'; ctx.textAlign = 'right'; ctx.fillText(C.name.replace('Mbak ', ''), 165, 290 + i * 470); ctx.restore();
+    ex.forEach((e, j) => {
+      const x = 330 + j * 300, y = 470 + i * 470;
+      ctx.save(); ctx.beginPath(); ctx.rect(x - 150, y - 450, 300, 450); ctx.clip();
+      Clay.drawClayChar(ctx, id, x, y + 200, 0.95, e, 'idle');
+      ctx.restore();
+    });
+  });
+  return cv.toDataURL('image/png');
+}
+</script></body></html>
